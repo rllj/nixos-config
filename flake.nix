@@ -7,6 +7,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     zig.url = "github:mitchellh/zig-overlay";
     firefox.url = "github:nix-community/flake-firefox-nightly";
+    zls.url = "github:zigtools/zls";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
