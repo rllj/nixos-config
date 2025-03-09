@@ -8,7 +8,7 @@
       ghostty
       alacritty
       discord
-      spotify
+      spotube
       atuin
       alejandra
       nil

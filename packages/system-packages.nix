@@ -8,6 +8,7 @@
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
     inputs.zig.packages.${pkgs.system}.master
+    inputs.zls.packages.${pkgs.system}.zls
     cowsay
     zsh
     gcc
@@ -22,5 +23,6 @@
     vulkan-tools
     xclip
     wl-clipboard
+    samply
   ];
 }
