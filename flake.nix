@@ -6,15 +6,16 @@
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     zig.url = "github:mitchellh/zig-overlay";
-    firefox.url = "github:nix-community/flake-firefox-nightly";
     zls.url = "github:zigtools/zls";
+    firefox.url = "github:nix-community/flake-firefox-nightly";
+    swww.url = "github:LGFae/swww";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
-    inherit (nixpkgs) lib;
+    inherit (nixpkgs.lib) nixosSystem;
   in {
     nixosConfigurations = {
-      desktop = lib.nixosSystem {
+      desktop = nixosSystem {
         system = "x86_64-linux";
         modules = [./configuration.nix];
         specialArgs = {inherit inputs;};

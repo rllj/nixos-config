@@ -1,7 +1,7 @@
 {...}: {
   imports = [
-        #./hyprland.nix
-    ./kde.nix
+    ./hyprland.nix
+    #./kde.nix
     ./xserver.nix
   ];
 }
