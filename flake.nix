@@ -9,15 +9,34 @@
     zls.url = "github:zigtools/zls";
     firefox.url = "github:nix-community/flake-firefox-nightly";
     swww.url = "github:LGFae/swww";
+    waybar.url = "github:Alexays/Waybar";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
     inherit (nixpkgs.lib) nixosSystem;
   in {
     nixosConfigurations = {
       desktop = nixosSystem {
         system = "x86_64-linux";
-        modules = [./configuration.nix];
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.users.rllj = import ./home;
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+          }
+        ];
         specialArgs = {inherit inputs;};
       };
     };
