@@ -1,7 +1,13 @@
-{inputs, pkgs, ...}: {
-  programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
   # Add common Wayland-related packages
   environment.systemPackages = with pkgs; [
     wl-clipboard # Clipboard utilities
@@ -19,9 +25,9 @@
   };
 
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1"; 
-    WLR_NO_HARDWARE_CURSORS = "1"; 
-    MOZ_ENABLE_WAYLAND = "1"; 
+    NIXOS_OZONE_WL = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
+    MOZ_ENABLE_WAYLAND = "1";
     XDG_SESSION_TYPE = "wayland";
   };
 }
