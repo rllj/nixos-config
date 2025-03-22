@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./waybar.nix
-    ./hyprland
+    ./hyprland.nix
   ];
 
   home.username = "rllj";
