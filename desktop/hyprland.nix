@@ -1,8 +1,6 @@
-{pkgs, ...}: {
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+{inputs, pkgs, ...}: {
+  programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   # Add common Wayland-related packages
   environment.systemPackages = with pkgs; [
@@ -20,11 +18,10 @@
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
-  # Recommended environment variables for Hyprland
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1"; # For Electron apps
-    WLR_NO_HARDWARE_CURSORS = "1"; # Might help with cursor issues
-    MOZ_ENABLE_WAYLAND = "1"; # For Firefox
+    NIXOS_OZONE_WL = "1"; 
+    WLR_NO_HARDWARE_CURSORS = "1"; 
+    MOZ_ENABLE_WAYLAND = "1"; 
     XDG_SESSION_TYPE = "wayland";
   };
 }

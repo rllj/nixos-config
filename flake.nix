@@ -9,6 +9,7 @@
     zls.url = "github:zigtools/zls";
     firefox.url = "github:nix-community/flake-firefox-nightly";
     swww.url = "github:LGFae/swww";
+    hyprland.url = "github:hyprwm/Hyprland";
     waybar.url = "github:Alexays/Waybar";
 
     home-manager = {
