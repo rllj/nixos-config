@@ -45,7 +45,7 @@
 
         allow_tearing = false;
 
-        layour = "dwindle";
+        layout = "dwindle";
       };
 
       decoration = {

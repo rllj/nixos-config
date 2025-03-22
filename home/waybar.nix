@@ -5,10 +5,6 @@
 }: {
   programs.waybar = {
     enable = true;
-    systemd = {
-      enable = true;
-      target = "graphical-session.target";
-    };
     style = ''
       * {
         font-family: "BlexMono Nerd Font", sans-serif;
