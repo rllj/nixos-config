@@ -14,16 +14,16 @@
         "XCURSOR_SIZE,16"
         "HYPRCURSOR_SIZE,16"
 
-        #        "LIBVA_DRIVER_NAME,nvidia"
-        #        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-        #        "NVD_BACKEND,direct"
-        #        "ELECTRON_OZONE_PLATFORM_HINT,auto"
-        #        "VDPAU_DRIVER,nvidia"
-        #        "__GL_GSYNC_ALLOWED,0"
-        #        "__GL_VRR_ALLOWED,0"
-        #        "WLR_DRM_NO_ATOMIC,1"
-        #        "WLR_RENDERER,vulkan"
-        #        "__NV_PRIME_RENDER_OFFLOAD,1"
+        "LIBVA_DRIVER_NAME,nvidia"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "NVD_BACKEND,direct"
+        "ELECTRON_OZONE_PLATFORM_HINT,auto"
+        "VDPAU_DRIVER,nvidia"
+        "__GL_GSYNC_ALLOWED,0"
+        "__GL_VRR_ALLOWED,0"
+        "WLR_DRM_NO_ATOMIC,1"
+        "WLR_RENDERER,vulkan"
+        "__NV_PRIME_RENDER_OFFLOAD,1"
       ];
 
       exec-once = [
