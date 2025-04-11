@@ -21,10 +21,10 @@
     git
     inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
     inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
-    inputs.zig.packages.${pkgs.system}.master
-    inputs.zls.packages.${pkgs.system}.zls
+    inputs.zig.packages.${pkgs.system}.default
     inputs.swww.packages.${pkgs.system}.swww
     inputs.waybar.packages.${pkgs.system}.waybar
+    zls
     cargo
     rust-analyzer
     cowsay
@@ -46,5 +46,7 @@
     gimp
     podman-compose
     fastfetch
+    prismlauncher
+    jdk21
   ];
 }

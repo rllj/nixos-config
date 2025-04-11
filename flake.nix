@@ -6,7 +6,6 @@
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     zig.url = "github:mitchellh/zig-overlay";
-    zls.url = "github:zigtools/zls";
     firefox.url = "github:nix-community/flake-firefox-nightly";
     swww.url = "github:LGFae/swww";
     hyprland.url = "github:hyprwm/Hyprland";
