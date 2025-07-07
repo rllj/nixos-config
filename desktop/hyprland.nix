@@ -11,12 +11,15 @@
   # Add common Wayland-related packages
   environment.systemPackages = with pkgs; [
     wl-clipboard # Clipboard utilities
-    hyprpaper # Wallpaper
     dunst # Notification daemon
     libnotify # Notification library
     xdg-desktop-portal-hyprland # XDG portal
     rofi-wayland
+    hyprshot
   ];
+
+  # For some reason this needed to be explicitly disabled
+  services.xserver.displayManager.lightdm.enable = false;
 
   # Configure XDG portals (file pickers, screen sharing)
   xdg.portal = {

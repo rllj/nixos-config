@@ -71,7 +71,7 @@
       };
       # https://wiki.hyprland.org/Configuring/Variables/#animations
       animations = {
-        enabled = true;
+        enabled = false;
 
         # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
 
@@ -132,8 +132,8 @@
 
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
-        kb_layout = "us";
-        kb_options = "caps:escape";
+        kb_layout = "us,no";
+        kb_options = "caps:escape, grp:alt_caps_toggle";
 
         repeat_delay = "180";
         repeat_rate = "66";
@@ -199,6 +199,9 @@
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
+        "$mainMod, PRINT, exec, hyprshot -m window"
+        ", PRINT, exec, hyprshot -m output"
+        "$mainMod SHIFT, P, exec, hyprshot -m region --clipboard-only"
       ];
 
       bindm = [
