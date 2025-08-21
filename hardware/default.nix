@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./nvidia.nix
     ./audio.nix
@@ -8,5 +9,6 @@
     enable = true;
     enable32Bit = true;
   };
-  hardware.opengl.enable = true;
+
+  services.udisks2.enable = true;
 }

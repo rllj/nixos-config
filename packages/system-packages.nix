@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
@@ -20,7 +21,7 @@
     inputs.zig.packages.${pkgs.system}.master
     inputs.swww.packages.${pkgs.system}.swww
     inputs.waybar.packages.${pkgs.system}.waybar
-    zls
+    inputs.zls.packages.${pkgs.system}.zls # master
     hyperfine
     pkgs.linuxPackages_latest.perf
     cargo
@@ -28,6 +29,7 @@
     zsh
     gcc
     clang
+    clang-tools
     ripgrep
     fd
     fzf
