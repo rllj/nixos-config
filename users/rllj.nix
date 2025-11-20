@@ -43,6 +43,7 @@
       fd
       fzf
       cloc
+      feh
     ];
   };
 }
