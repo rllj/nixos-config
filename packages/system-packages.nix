@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -16,34 +15,13 @@
 
   environment.systemPackages = with pkgs; [
     git
-    inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
-    inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
-    inputs.zig.packages.${pkgs.system}.master
-    inputs.swww.packages.${pkgs.system}.swww
-    inputs.waybar.packages.${pkgs.system}.waybar
-    inputs.zls.packages.${pkgs.system}.zls # master
-    hyperfine
-    pkgs.linuxPackages_latest.perf
-    cargo
-    rust-analyzer
     zsh
     gcc
     clang
-    clang-tools
     ripgrep
-    fd
-    fzf
     xclip
     wl-clipboard
-    samply
-    cargo
     unzip
-    gimp
     jdk21
-    bat
-    cloc
-    direnv
-    gtypist
-    xxd
   ];
 }

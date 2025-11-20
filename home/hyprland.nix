@@ -133,7 +133,14 @@
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
         kb_layout = "us,no";
-        kb_options = "caps:escape, grp:alt_caps_toggle";
+        kb_options = [
+          "caps:escape"
+          "grp:alt_caps_toggle"
+          "h:left"
+          "j:down"
+          "k:up"
+          "l:right"
+        ];
 
         repeat_delay = "180";
         repeat_rate = "66";
