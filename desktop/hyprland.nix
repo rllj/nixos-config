@@ -2,29 +2,29 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+let
+  inherit (pkgs.stdenv.hostPlatform) system;
+in
+{
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    package = inputs.hyprland.packages."${system}".hyprland;
+    portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
   };
-  # Add common Wayland-related packages
   environment.systemPackages = with pkgs; [
-    wl-clipboard # Clipboard utilities
-    dunst # Notification daemon
-    libnotify # Notification library
-    xdg-desktop-portal-hyprland # XDG portal
-    rofi-wayland
+    wl-clipboard
+    dunst
+    libnotify
+    xdg-desktop-portal-hyprland
     hyprshot
   ];
 
-  # For some reason this needed to be explicitly disabled
   services.xserver.displayManager.lightdm.enable = false;
 
-  # Configure XDG portals (file pickers, screen sharing)
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   environment.sessionVariables = {

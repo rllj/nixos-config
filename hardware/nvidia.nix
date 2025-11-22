@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   nixpkgs.config.nvidia.acceptLicense = true;
 
   environment.variables = {
@@ -21,7 +22,7 @@
 
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
     ];
   };

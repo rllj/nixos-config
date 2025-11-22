@@ -133,14 +133,7 @@
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
         kb_layout = "us,no";
-        kb_options = [
-          "caps:escape"
-          "grp:alt_caps_toggle"
-          "h:left"
-          "j:down"
-          "k:up"
-          "l:right"
-        ];
+        kb_options = "caps:escape, grp:alt_caps_toggle";
 
         repeat_delay = "180";
         repeat_rate = "66";
@@ -152,11 +145,6 @@
         touchpad = {
           natural_scroll = false;
         };
-      };
-
-      # https://wiki.hyprland.org/Configuring/Variables/#gestures
-      gestures = {
-        workspace_swipe = false;
       };
 
       device = {

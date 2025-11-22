@@ -1,8 +1,11 @@
 { inputs, pkgs, ... }:
+let
+  inherit (pkgs.stdenv.hostPlatform) system;
+in
 {
   users.users.rllj = {
     isNormalUser = true;
-    description = "Ruben Lee Landroe Johnsen";
+    description = "rllj";
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -19,20 +22,20 @@
       stylua
       gopls
       tree
-      make
+      gnumake
       ninja
       ffmpeg
       python3
       hyperfine
-      pkgs.linuxPackages_latest.perf
+      perf
       cargo
       rust-analyzer
-      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
-      inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
-      inputs.zig.packages.${pkgs.system}.master
-      inputs.swww.packages.${pkgs.system}.swww
-      inputs.waybar.packages.${pkgs.system}.waybar
-      inputs.zls.packages.${pkgs.system}.zls # master
+      inputs.neovim-nightly-overlay.packages.${system}.default
+      inputs.firefox.packages.${system}.firefox-nightly-bin
+      inputs.zig.packages.${system}.master
+      inputs.swww.packages.${system}.swww
+      inputs.waybar.packages.${system}.waybar
+      inputs.zls.packages.${system}.zls # master
       clang-tools
       samply
       gimp
@@ -44,6 +47,7 @@
       fzf
       cloc
       feh
+      rofi
     ];
   };
 }
