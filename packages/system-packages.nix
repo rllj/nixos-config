@@ -18,6 +18,7 @@
     zsh
     gcc
     clang
+    clang-tools
     ripgrep
     xclip
     wl-clipboard

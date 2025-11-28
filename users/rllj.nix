@@ -36,7 +36,6 @@ in
       inputs.swww.packages.${system}.swww
       inputs.waybar.packages.${system}.waybar
       inputs.zls.packages.${system}.zls # master
-      clang-tools
       samply
       gimp
       xxd
