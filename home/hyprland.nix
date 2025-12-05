@@ -28,8 +28,8 @@
 
       exec-once = [
         "waybar &"
-        "swww-daemon &"
-        "swww img ./wallpapers/fog_forest.png"
+        "awww-daemon &"
+        "awww img ./wallpapers/fog_forest.png"
       ];
 
       general = {

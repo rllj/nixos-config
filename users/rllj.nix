@@ -33,7 +33,7 @@ in
       inputs.neovim-nightly-overlay.packages.${system}.default
       inputs.firefox.packages.${system}.firefox-nightly-bin
       inputs.zig.packages.${system}.master
-      inputs.swww.packages.${system}.swww
+      inputs.awww.packages.${system}.awww
       inputs.waybar.packages.${system}.waybar
       inputs.zls.packages.${system}.zls # master
       samply

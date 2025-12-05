@@ -10,5 +10,16 @@
     enable32Bit = true;
   };
 
-  #services.udisks2.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
 }

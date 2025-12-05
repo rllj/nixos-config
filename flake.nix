@@ -20,9 +20,8 @@
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    swww = {
-      url = "github:LGFae/swww";
-      inputs.nixpkgs.follows = "nixpkgs";
+    awww = {
+      inputs.awww.url = "git+https://codeberg.org/LGFae/awww";
     };
     hyprland = {
       url = "github:hyprwm/Hyprland";
