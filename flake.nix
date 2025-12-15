@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     awww = {
-      inputs.awww.url = "git+https://codeberg.org/LGFae/awww";
+      url = "git+https://codeberg.org/LGFae/awww";
     };
     hyprland = {
       url = "github:hyprwm/Hyprland";
